@@ -46,9 +46,10 @@ public class UserImpl extends UnicastRemoteObject implements User, Proxy {
    @Override
    public boolean equals(Object o) {
       if (this == o) return true;
-      if (!(o instanceof UserImpl user)) return false;
+      if (!(o instanceof UserImpl)) return false;
       if (!super.equals(o)) return false;
-      return id == user.id;
+
+      return id == ((UserImpl) o).id;
    }
 
    @Override

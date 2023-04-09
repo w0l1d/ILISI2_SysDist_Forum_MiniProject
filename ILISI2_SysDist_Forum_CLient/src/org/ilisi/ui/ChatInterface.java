@@ -142,7 +142,7 @@ public class ChatInterface extends JFrame implements ActionListener {
       // Check if the send button or input text field is clicked
       if (e.getSource() == sendButton || e.getSource() == inputTextField) {
          String input = inputTextField.getText();
-         if (!input.isBlank()) { // Check if the input text field is not empty
+         if (!input.isEmpty()) { // Check if the input text field is not empty
             try {
                forum.dire(id, input); // Send the message to the server
                addChatMessage(input, true); // Add sent message on the right side
